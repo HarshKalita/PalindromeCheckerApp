@@ -1,23 +1,29 @@
 
-
-import java.util.Scanner;
-
 public class PalindromeCheckerApp {
+
+    public static boolean isPalindrome(String str) {
+        char[] arr = str.toCharArray();
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            if (arr[left] != arr[right]) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        String input = "racecar";
 
-        System.out.print("Enter a string: ");
-        String str = sc.nextLine();
-
-        String original = str.toLowerCase();
-        String reversed = new StringBuilder(original).reverse().toString();
-
-        if (original.equals(reversed)) {
+        if (isPalindrome(input)) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not a Palindrome");
         }
-
-        sc.close();
     }
 }
