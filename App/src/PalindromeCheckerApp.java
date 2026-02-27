@@ -1,14 +1,23 @@
 
 
+import java.util.Scanner;
+
 public class PalindromeCheckerApp {
     public static void main(String[] args) {
-        String s1 = "madam";
-        String s2 = "madam";
-        if(s1.equals(s2)){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        String original = str.toLowerCase();
+        String reversed = new StringBuilder(original).reverse().toString();
+
+        if (original.equals(reversed)) {
             System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a Palindrome");
         }
-        else{
-            System.out.println("Not Palindrome");
-        }
+
+        sc.close();
     }
 }
