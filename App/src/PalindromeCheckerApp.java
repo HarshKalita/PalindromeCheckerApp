@@ -1,20 +1,9 @@
-import java.util.*;
+
+
 public class PalindromeCheckerApp {
-    public static void main() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number: ");
-        int n = sc.nextInt();
-        int a=0,b=0;
-        while(n!=0){
-            a = n%10;
-            b = b*10+a;
-            n = n/10;
-        }
-        if(n==b){
-            System.out.println(n + " is a palindrome");
-        }
-        else{
-            System.out.println("Not a palindrome");
-        }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Palindrome Checker Management System");
+        System.out.println("Version: 1.0");
+        System.out.println("System initialized successfully");
     }
 }
